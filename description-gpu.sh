@@ -8,9 +8,7 @@
 #SBATCH --output=description-gpu.out
 #SBATCH --error=description-gpu.err
 
-HOSTNAME=$(hostname)
-
-if [ "$HOSTNAME" == "vega.iiia.csic.es" ]
+if [ "$USER" == "filippo.bistaffa" ]
 then
     spack load --first py-pandas
 else
