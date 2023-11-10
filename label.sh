@@ -7,6 +7,13 @@
 #SBATCH --output=label.out
 #SBATCH --error=label.err
 
-module load python/3.9.9
+HOSTNAME=$(hostname)
+
+if [ "$HOSTNAME" == "vega.iiia.csic.es" ]
+then
+    spack load --first py-pandas
+else
+    module load python/3.9.9
+fi
 
 srun python3 label.py
