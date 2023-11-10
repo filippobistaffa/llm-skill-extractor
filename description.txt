@@ -1,0 +1,9 @@
+This self paced course provides an introduction to AI, its impact on society, automation concepts and techniques and why AI is so special.
+Who is this course for? This course is aimed at learners who have an interest in AI and relevant emerging technologies and how they impact on, and co-evolute with, society. 
+What will you learn? By the end of this course you will have an understanding of big data and IoT as strengths of AI and how emerging relevant technologies are revolutionising the AI systems.
+Topics overview: Some of the topics covered include narrow AI, augmented intelligence, emerging automation techniques and how AI impacts society
+How much time you need to invest: Completing the course should take  approximately four (4) hours 
+Prerequisites: There are no prerequisites for entry to this module 
+Course Certificate: A course certificate will be generated on the successful completion of the final quiz 
+Course Developers: Based on the book by: Shnurenko, I; Murovana T; Kushchu I. UNESCO Institute for Information Technologies in Education in cooperation with TheNextMinds 
+Course Contact: In case of technical troubleshooting or questions, please reach out to fairforward@giz.de 
