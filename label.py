@@ -30,7 +30,7 @@ if __name__ == "__main__":
         '--model': os.path.join(llama_cpp_subdir, 'models', 'vicuna-13b-v1.5-16k.Q4_K_M.gguf'),
         '--ctx-size': str(len(prompt)),
         '--seed': str(args.seed),
-        '--prompt': prompt,
+        '--prompt': f'USER: {prompt}\nASSISTANT:',
         '--repeat_penalty': '1.1',
         '--n-predict': '-1',
         '--temp': '0.7',
