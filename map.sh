@@ -14,4 +14,4 @@ else
     module load python/3.9.9
 fi
 
-srun python3 map.py
+srun python3 map.py --seed $RANDOM

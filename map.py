@@ -18,7 +18,7 @@ if __name__ == "__main__":
     # build prompt
     skills_list = pd.read_csv(args.skills_dataset, sep='\t', header=None).values.ravel()
     skills_string = '- ' + '\n- '.join(skills_list) + '\n'
-    prompt = f'Which of the skills of the following list best represents \"{args.skill}\"?\n{skills_string}'
+    prompt = f'Pick AT LEAST one skill (or more than one) in the following list that best represents \"{args.skill}\"?\n{skills_string}'
 
     # llama.cpp parameters
     llama_cpp_subdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'llama.cpp')
