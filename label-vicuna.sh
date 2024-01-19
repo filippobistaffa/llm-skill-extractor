@@ -9,4 +9,4 @@
 
 spack load --first py-pandas
 
-srun python3 label.py
+srun python3 label.py --seed $RANDOM
