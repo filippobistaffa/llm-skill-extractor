@@ -23,6 +23,7 @@ if __name__ == "__main__":
         description = f'' + ''.join(f.readlines()).strip()
 
     prompt = f'Given the following list of {len(skills_list)} skills:\n{skills_string}Which of the above-mentioned skills could be acquired by participating to the following course:\n{description}'
+    #prompt = f'Which of the specialist tasks in the Australian Skills Framework are most related to the following course:\n{description}'
 
     # llama.cpp parameters
     llama_cpp_subdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'llama.cpp')

@@ -7,11 +7,6 @@
 #SBATCH --output=label-mixtral.out
 #SBATCH --error=label-mixtral.err
 
-if [ "$USER" == "filippo.bistaffa" ]
-then
-    spack load --first py-pandas
-else
-    module load python/3.9.9
-fi
+spack load --first py-pandas
 
 srun python3 label-mixtral.py
