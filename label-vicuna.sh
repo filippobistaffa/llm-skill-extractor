@@ -4,8 +4,8 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=20
 #SBATCH --mem=64G
-#SBATCH --output=label-vicuna.out
-#SBATCH --error=label-vicuna.err
+#SBATCH --output=label-vicuna-%j.out
+#SBATCH --error=label-vicuna-%j.err
 
 spack load --first py-pandas
 

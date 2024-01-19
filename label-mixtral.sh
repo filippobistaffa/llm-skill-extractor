@@ -4,8 +4,8 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=20
 #SBATCH --mem=64G
-#SBATCH --output=label-mixtral.out
-#SBATCH --error=label-mixtral.err
+#SBATCH --output=label-mixtral-%j.out
+#SBATCH --error=label-mixtral-%j.err
 
 spack load --first py-pandas
 
