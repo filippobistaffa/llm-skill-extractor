@@ -9,4 +9,4 @@
 
 spack load --first py-pandas
 
-srun python3 label-vicuna.py
+srun python3 label.py

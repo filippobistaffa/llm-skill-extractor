@@ -9,4 +9,4 @@
 
 spack load --first py-pandas
 
-python3 description-vicuna.py
+python3 description.py

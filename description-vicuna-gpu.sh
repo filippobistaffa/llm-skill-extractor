@@ -12,4 +12,4 @@
 spack load cuda@11.8.0
 spack load --first py-pandas
 
-srun python3 description-vicuna.py --n-gpu-layers 32
+srun python3 description.py --n-gpu-layers 32

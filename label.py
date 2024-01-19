@@ -8,10 +8,14 @@ import os
 
 if __name__ == "__main__":
 
+    llama_cpp_subdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'llama.cpp')
+
     # parse command-line arguments
     parser = ap.ArgumentParser()
     parser.add_argument('--skills_dataset', type=str, default=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'skills.txt'))
     parser.add_argument('--description', type=str, default=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'description.txt'))
+    parser.add_argument('--model', type=str, default=os.path.join(llama_cpp_subdir, 'models', 'vicuna-13b-v1.5-16k.Q4_K_M.gguf'))
+    parser.add_argument('--format', type=str, default='USER: {}\nASSISTANT:')
     parser.add_argument('--seed', type=int, default=0)
     args, additional = parser.parse_known_args()
 
@@ -22,16 +26,16 @@ if __name__ == "__main__":
     with open(args.description) as f:
         description = f'' + ''.join(f.readlines()).strip()
 
-    prompt = f'Given the following list of {len(skills_list)} skills:\n{skills_string}Which of the above-mentioned skills could be acquired by participating to the following course:\n{description}'
-    #prompt = f'Which of the specialist tasks in the Australian Skills Framework are most related to the following course:\n{description}'
+    #prompt = f'Given the following list of {len(skills_list)} skills:\n{skills_string}Which of the above-mentioned skills could be acquired by participating to the following course:\n{description}'
+    prompt = f'Which of the specialist tasks in the Australian Skills Framework are most related to the following course:\n{description}'
+    prompt_format = args.format.format(prompt)
 
     # llama.cpp parameters
-    llama_cpp_subdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'llama.cpp')
     llama_cpp_params = {
-        '--model': os.path.join(llama_cpp_subdir, 'models', 'vicuna-13b-v1.5-16k.Q4_K_M.gguf'),
-        '--ctx-size': str(len(prompt)),
+        '--model': args.model,
+        '--ctx-size': str(len(prompt_format)),
         '--seed': str(args.seed),
-        '--prompt': f'USER: {prompt}\nASSISTANT:',
+        '--prompt': prompt_format,
         '--repeat_penalty': '1.1',
         '--n-predict': '-1',
         '--temp': '0.7',
@@ -42,6 +46,9 @@ if __name__ == "__main__":
     for (param, value) in llama_cpp_params.items():
         command_line.extend([param, value])
     command_line.extend(additional) # by putting additional at the end we can override the default ones
+
+    #print(command_line)
+    #quit()
 
     # run subprocess
     result = subprocess.run(command_line, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
