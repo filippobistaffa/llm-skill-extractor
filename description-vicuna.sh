@@ -9,4 +9,4 @@
 
 spack load --first py-pandas
 
-python3 description.py
+python3 description.py --seed $RANDOM
