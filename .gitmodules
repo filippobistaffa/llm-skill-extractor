@@ -2,4 +2,4 @@
 	path = llama.cpp
 	url = https://github.com/ggerganov/llama.cpp
 [submodule "llama.cpp/"]
-	branch = mixtral
+	branch = master
