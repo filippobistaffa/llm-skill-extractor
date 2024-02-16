@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     prompt = f'Given the following list of {len(skills_list)} skills:\n{skills_string}Which of the above-mentioned skills could be acquired by participating to the following course:\n{description}'
     #prompt = f'Which of the specialist tasks in the Australian Skills Framework are most related to the following course:\n{description}'
-    prompt_format = ('"' + args.format + '"').format(prompt)
+    prompt_format = ('"' + args.format + '"').format(prompt).replace("\n", "\\n").replace("\t", "\\t")
 
     # llama.cpp parameters
     llama_cpp_params = {
@@ -48,4 +48,4 @@ if __name__ == "__main__":
     command_line.extend(additional) # by putting additional at the end we can override the default ones
 
     with open(args.cmd, "w") as f:
-        f.write(" ".join(command_line).replace("\n", "\\n").replace("\t", "\\t"))
+        f.write(" ".join(command_line))
