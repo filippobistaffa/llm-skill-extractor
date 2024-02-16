@@ -9,6 +9,6 @@
 
 spack load --first py-pandas
 
-cmd=$(mktemp ./tempfile.XXXXXX.sh)
+cmd=label-vicuna-$SLURM_JOB_ID.cmd
 srun python3 label.py --seed $RANDOM --cmd $cmd
 bash $cmd

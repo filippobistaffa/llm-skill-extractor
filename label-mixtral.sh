@@ -9,6 +9,6 @@
 
 spack load --first py-pandas
 
-cmd=$(mktemp ./tempfile.XXXXXX.sh)
+cmd=label-mixtral-$SLURM_JOB_ID.cmd
 srun python3 label.py --model "llama.cpp/models/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf" --format "[INST] {} [/INST]" --seed $RANDOM --cmd $cmd
 bash $cmd
