@@ -1,7 +1,6 @@
 import argparse as ap
 import pandas as pd
 import numpy as np
-import subprocess
 import sys
 import os
 
@@ -17,6 +16,7 @@ if __name__ == "__main__":
     parser.add_argument('--model', type=str, default=os.path.join(llama_cpp_subdir, 'models', 'vicuna-13b-v1.5-16k.Q4_K_M.gguf'))
     parser.add_argument('--format', type=str, default='USER: {}\nASSISTANT:')
     parser.add_argument('--seed', type=int, default=0)
+    parser.add_argument('--cmd', type=str, default='cmd.sh')
     args, additional = parser.parse_known_args()
 
     # build prompt
@@ -26,9 +26,9 @@ if __name__ == "__main__":
     with open(args.description) as f:
         description = f'' + ''.join(f.readlines()).strip()
 
-    #prompt = f'Given the following list of {len(skills_list)} skills:\n{skills_string}Which of the above-mentioned skills could be acquired by participating to the following course:\n{description}'
-    prompt = f'Which of the specialist tasks in the Australian Skills Framework are most related to the following course:\n{description}'
-    prompt_format = args.format.format(prompt)
+    prompt = f'Given the following list of {len(skills_list)} skills:\n{skills_string}Which of the above-mentioned skills could be acquired by participating to the following course:\n{description}'
+    #prompt = f'Which of the specialist tasks in the Australian Skills Framework are most related to the following course:\n{description}'
+    prompt_format = ('"' + args.format + '"').format(prompt)
 
     # llama.cpp parameters
     llama_cpp_params = {
@@ -47,12 +47,5 @@ if __name__ == "__main__":
         command_line.extend([param, value])
     command_line.extend(additional) # by putting additional at the end we can override the default ones
 
-    #print(command_line)
-    #quit()
-
-    # run subprocess
-    result = subprocess.run(command_line, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
-    # print stdout and stderr
-    print(result.stdout.decode().rstrip())
-    print(result.stderr.decode().rstrip(), file=sys.stderr)
+    with open(args.cmd, "w") as f:
+        f.write(" ".join(command_line).replace("\n", "\\n").replace("\t", "\\t"))

@@ -9,4 +9,6 @@
 
 spack load --first py-pandas
 
-srun python3 label.py --model "llama.cpp/models/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf" --format "[INST] {} [/INST]" --seed $RANDOM
+cmd=$(mktemp ./tempfile.XXXXXX.sh)
+srun python3 label.py --model "llama.cpp/models/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf" --format "[INST] {} [/INST]" --seed $RANDOM --cmd $cmd
+bash $cmd

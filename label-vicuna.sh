@@ -9,4 +9,6 @@
 
 spack load --first py-pandas
 
-srun python3 label.py --seed $RANDOM
+cmd=$(mktemp ./tempfile.XXXXXX.sh)
+srun python3 label.py --seed $RANDOM --cmd $cmd
+bash $cmd
