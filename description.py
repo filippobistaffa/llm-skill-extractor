@@ -14,8 +14,8 @@ if __name__ == "__main__":
     parser = ap.ArgumentParser()
     parser.add_argument('--skills_dataset', type=str, default=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'skills.txt'))
     parser.add_argument('--n_skills', type=int, default=3)
-    parser.add_argument('--model', type=str, default=os.path.join(llama_cpp_subdir, 'models', 'vicuna-13b-v1.5-16k.Q4_K_M.gguf'))
-    parser.add_argument('--format', type=str, default='USER: {}\nASSISTANT:')
+    parser.add_argument('--model', type=str, default=os.path.join(llama_cpp_subdir, 'models', 'mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf'))
+    parser.add_argument('--format', type=str, default='[INST] {} [/INST]')
     parser.add_argument('--seed', type=int, default=0)
     args, additional = parser.parse_known_args()
 

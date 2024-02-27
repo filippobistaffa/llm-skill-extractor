@@ -12,4 +12,4 @@
 spack load cuda@11.8.0
 spack load --first py-pandas
 
-srun python3 description.py --seed $RANDOM --n-gpu-layers 32
+srun python3 description.py --model "llama.cpp/models/vicuna-13b-v1.5-16k.Q4_K_M.gguf" --format "USER: {}\nASSISTANT:" --seed $RANDOM --n-gpu-layers 32

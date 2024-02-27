@@ -10,5 +10,5 @@
 spack load --first py-pandas
 
 cmd=label-vicuna-$SLURM_JOB_ID.cmd
-srun python3 label.py --seed $RANDOM --cmd $cmd
+srun python3 label.py --model "llama.cpp/models/vicuna-13b-v1.5-16k.Q4_K_M.gguf" --format "USER: {}\nASSISTANT:" --seed $RANDOM --cmd $cmd
 bash $cmd
