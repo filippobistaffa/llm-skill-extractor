@@ -7,7 +7,15 @@
 #SBATCH --output=label-gemma-%j.out
 #SBATCH --error=label-gemma-%j.err
 
-spack load --first py-pandas
+HOSTNAME=$(hostname)
+
+if [ "$HOSTNAME" == "vega.iiia.csic.es" ]
+then
+    spack load --first py-pandas
+elif [ "$HOSTNAME" == "login*" ]
+then
+    module load pandas
+fi
 
 cmd=label-gemma-$SLURM_JOB_ID.cmd
 srun python3 label.py --model "llama.cpp/models/gemma-7b-it-Q4_K_M.gguf" --format "<start_of_turn>user\n{}<end_of_turn>\n<start_of_turn>model" --seed $RANDOM --cmd $cmd

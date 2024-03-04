@@ -7,7 +7,15 @@
 #SBATCH --output=label-mixtral-%j.out
 #SBATCH --error=label-mixtral-%j.err
 
-spack load --first py-pandas
+HOSTNAME=$(hostname)
+
+if [ "$HOSTNAME" == "vega.iiia.csic.es" ]
+then
+    spack load --first py-pandas
+elif [ "$HOSTNAME" == "login*" ]
+then
+    module load pandas
+fi
 
 cmd=label-mixtral-$SLURM_JOB_ID.cmd
 srun python3 label.py --model "llama.cpp/models/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf" --format "[INST] {} [/INST]" --seed $RANDOM --cmd $cmd

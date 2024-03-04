@@ -7,6 +7,14 @@
 #SBATCH --output=description-mixtral-%j.out
 #SBATCH --error=description-mixtral-%j.err
 
-spack load --first py-pandas
+HOSTNAME=$(hostname)
+
+if [ "$HOSTNAME" == "vega.iiia.csic.es" ]
+then
+    spack load --first py-pandas
+elif [ "$HOSTNAME" == "login*" ]
+then
+    module load pandas
+fi
 
 python3 description.py --model "llama.cpp/models/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf" --format "[INST] {} [/INST]" --seed $RANDOM
