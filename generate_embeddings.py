@@ -20,6 +20,7 @@ if __name__ == "__main__":
     parser.add_argument('--model', type=str, default='text-embedding-3-small', choices=['text-embedding-3-small', 'text-embedding-3-large'])
     parser.add_argument('--embeddings', type=str, default='skills-embeddings.pkl')
     args, additional = parser.parse_known_args()
+
     df = pd.read_csv(args.skills, index_col=0)
     df['embedding'] = df['skill'].apply(lambda x: get_embedding(x, model=args.model))
     df.to_pickle(args.embeddings)
