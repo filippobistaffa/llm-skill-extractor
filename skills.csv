@@ -1,0 +1,753 @@
+id,skill
+0,Administer compensation or benefits programs
+1,Administer staff recruitment or hiring activities
+2,Administer tests to assess educational needs or progress
+3,Advise communities or institutions regarding health or safety issues
+4,Advise customers on technical or procedural issues
+5,Advise customers on the use of goods or services
+6,"Advise educators on curricula, instructional methods or policies"
+7,Advise others about environmental management or conservation
+8,Advise others on business or operational matters
+9,Advise others on career or personal development
+10,Advise others on financial matters
+11,Advise others on health and safety issues
+12,Advise others on health care issues
+13,Advise others on health care matters
+14,Advise others on human resources topics
+15,Advise others on legal or regulatory compliance matters
+16,Advise others on matters of public policy
+17,"Advise others on technical requirements for surveying, mapping and spatial information systems"
+18,Advise others regarding green practices or environmental concerns
+19,Analyse and understand the local and national implications of proposed legislation
+20,"Analyse budgetary, accounting or business data"
+21,Analyse business or financial data
+22,Analyse consumer trends
+23,Analyse data to assess operational or project effectiveness
+24,Analyse data to determine project feasibility
+25,Analyse data to identify or resolve operational problems
+26,Analyse data to identify trends or relationships among variables
+27,Analyse data to inform operational decisions or activities
+28,Analyse data to inform staffing decisions
+29,Analyse design or requirements information for mechanical equipment or systems
+30,Analyse design requirements for computer or electronics systems
+31,Analyse financial information
+32,Analyse financial records to improve budgeting or planning
+33,Analyse financial records to improve efficiency
+34,Analyse health-related data
+35,Analyse impact of legal or regulatory changes
+36,Analyse industry trends
+37,"Analyse jobs using observation, survey or interview techniques"
+38,Analyse market conditions or trends
+39,Analyse market or customer related data
+40,Analyse market research data
+41,Analyse operational data
+42,"Analyse operational data to evaluate operations, processes or products"
+43,"Analyse physical, survey, or geographic data"
+44,Analyse project data to determine specifications or requirements
+45,Analyse risks related to investments in green technology
+46,Analyse risks to minimise losses or damages
+47,"Analyse security of systems, network or data"
+48,Analyse test or validation data
+49,Analyse website or related online data to track trends or usage
+50,Answer customer questions about goods or services
+51,Anticipate the organisational implications of machine learning models
+52,Apply and maintain information security controls as required by policies or risk assessments
+53,"Apply finishes to artwork, crafts, or displays"
+54,Apply information technology to solve business or other applied problems
+55,"Apply knowledge, understanding and respect of culturally significant sites or objects"
+56,Apply machine learning techniques to data
+57,Apply mathematical models of financial or business conditions
+58,Apply mathematical principles or statistical approaches to solve problems in scientific or applied fields
+59,Apply new technologies to improve work processes
+60,Appraise environmental impact of regulations or policies
+61,Appraise property values
+62,Approve expenditures
+63,"Arrange artwork, products or props"
+64,Arrange collective bargaining agreements
+65,Arrange delivery of goods or services
+66,Assess database performance
+67,Assess educational needs of students
+68,Assess financial status of clients
+69,Assess individual or community needs for educational or social services
+70,Assess network-related risks and specify recovery routines and contingency procedures
+71,Assess risks to business operations
+72,"Assess the cost effectiveness of products, projects or services"
+73,Assign duties or work schedules to employees
+74,Attend events to develop professional knowledge
+75,"Attend receptions, dinners, and conferences to meet people, exchange views and information, and develop working relationships"
+76,Attend training sessions or events to develop or maintain professional knowledge
+77,Authorise financial actions
+78,"Build models, patterns or templates"
+79,Calculate data to inform organisational operations
+80,Calculate financial data
+81,Calculate geographic positions from survey data
+82,Calculate tax information
+83,Calculate the volume or depth of liquids or gases
+84,Calibrate scientific or technical equipment
+85,Classify materials according to standard systems
+86,Clean equipment or facilities
+87,Clean work areas
+88,Coach others
+89,Collaborate with health care professionals to plan or provide treatment
+90,Collaborate with other law enforcement or security agencies to share information
+91,Collaborate with other teaching professionals to develop educational programs
+92,Collaborate with others in marketing activities
+93,Collaborate with others to determine design specifications or details
+94,Collaborate with others to determine technical details of productions
+95,Collaborate with others to develop or implement marketing strategies
+96,Collaborate with others to develop or refine designs
+97,Collaborate with others to prepare or perform artistic productions
+98,Collaborate with others to resolve information technology issues
+99,Collaborate with technical specialists to resolve design or development problems
+100,Collate and analyse information for threat intelligence requirements from a variety of sources
+101,Collect data about customer needs
+102,Collect data about project sites
+103,Collect environmental data or samples
+104,Collect evidence for legal proceedings
+105,Collect information about community health needs
+106,"Collect medical information from patients, family members or other medical professionals"
+107,Collect payments for goods or services
+108,Collect samples of raw materials or finished products
+109,"Collect, process and preserve digital records or evidence in accordance with procedures"
+110,Communicate health and wellness information to the public
+111,Communicate organisational information to customers or other stakeholders
+112,Communicate organisational policies and procedures
+113,Communicate project information to others
+114,Communicate results of environmental research
+115,"Communicate technical information to suppliers, contractors or regulatory agencies"
+116,Communicate with customers to resolve complaints or ensure satisfaction
+117,Communicate with government agencies
+118,Communicate with management or other staff to resolve problems
+119,Communicate with other construction or mining staff to discuss project details
+120,Communicate with others to coordinate vehicle movement
+121,Communicate with the public on environmental issues
+122,Compile data or documentation
+123,Compile operational data
+124,Compile specialised bibliographies or lists of materials
+125,Compute debt repayment schedules
+126,Conduct eligibility or selection interviews
+127,Conduct employee training programs
+128,Conduct financial audits
+129,Conduct financial or regulatory audits
+130,Conduct gaming transactions
+131,Conduct legal cyberattack simulations by designing and utilising hacking tools
+132,Conduct market research
+133,Conduct opinion surveys or needs assessments
+134,Conduct quantitative failure analyses of operational data
+135,Conduct research on social issues
+136,Conduct research to gain information about products or processes
+137,"Conduct research to inform art, designs or other work"
+138,Conduct surveys in organisations
+139,Conduct validation tests of equipment or processes
+140,Confer with clients to determine needs
+141,Confer with co-workers or internal stakeholders to coordinate operational activities
+142,Confer with colleagues to formulate positions and strategies pertaining to pending issues
+143,Confer with other staff to resolve design or operational problems
+144,Confer with others about financial matters
+145,Confer with others to conduct or arrange operational activities
+146,Confer with peers to accomplish work
+147,Confer with staff to coordinate business operations
+148,Confer with technical staff to prepare designs or operational plans
+149,Configure computer networks
+150,"Construct distinctive physical objects for artistic, functional or commercial purposes"
+151,Construct exhibits or parts of exhibits
+152,Consult with others regarding health and safety associated with equipment or facilities
+153,Contact current or potential customers to promote goods or services
+154,Convert data among multiple digital or analogue formats
+155,Coordinate activities of food service staff
+156,"Coordinate activities with suppliers, contractors, clients, or other departments"
+157,Coordinate and administer community or social service programs
+158,Coordinate construction or installation activities
+159,Coordinate design activities
+160,Coordinate logistics for productions or events
+161,Coordinate operational activities
+162,Coordinate operational activities with external stakeholders
+163,Coordinate project activities with other staff or departments
+164,Coordinate recruitment activities
+165,Coordinate regulatory documentation activities
+166,Coordinate resource procurement activities
+167,Coordinate safety or regulatory compliance activities
+168,Coordinate sales campaigns
+169,Coordinate software or hardware installation
+170,Coordinate special events or programs
+171,Coordinate with external parties to exchange information
+172,Correspond with customers to answer questions or resolve complaints
+173,Create computer-generated graphics or animation
+174,Create construction or installation diagrams
+175,Create databases to store electronic data
+176,Create electrical schematics
+177,Create electronic data backup to prevent loss of information
+178,Create graphical representations of civil structures
+179,Create graphical representations of industrial production systems
+180,Create graphical representations of mechanical equipment
+181,"Create graphical representations of structures, landscapes or aquatic systems"
+182,"Create images of data, locations or products"
+183,Create maps
+184,Create marketing materials
+185,Create models of engineering designs or methods
+186,Create physical models or prototypes
+187,Create schematic drawings for electronics
+188,Create technology-based learning materials
+189,Deliver promotional presentations to current or prospective customers
+190,"Deliver, publish, broadcast or distribute final audio or visual media product"
+191,Demonstrate products to consumers
+192,Design alternative energy systems
+193,Design civil structures or systems
+194,Design computer modelling or simulation programs
+195,Design control systems for mechanical or other equipment
+196,Design electrical equipment or systems
+197,Design electromechanical equipment or systems
+198,Design electronic or computer equipment or instrumentation
+199,Design energy efficient equipment or systems
+200,Design energy production or management equipment or systems
+201,Design environmental control systems
+202,Design industrial equipment
+203,Design industrial processing systems
+204,Design integrated computer systems
+205,"Design layout of art or product exhibits, displays or promotional materials"
+206,Design layouts for print publications
+207,Design public or employee health programs
+208,Design research studies to obtain scientific information
+209,Design structures or facilities
+210,Design water conservation systems
+211,Design websites or applications
+212,Determine appropriate locations for operations or installations
+213,Determine appropriate methods for data analysis
+214,Determine causes of operational problems or failures
+215,Determine design criteria or specifications
+216,Determine how best to represent a concept visually
+217,Determine operational compliance with regulations or standards
+218,Determine operational criteria or specifications
+219,Determine operational methods
+220,Determine operational procedures
+221,Determine prices for menu items
+222,Determine pricing or monetary policies
+223,Determine resource needs
+224,Determine technical requirements of productions or projects
+225,Determine the value of goods or services
+226,"Develop artistic or design concepts for decoration, exhibition, performance or commercial purposes"
+227,Develop business or financial information systems
+228,Develop business or market strategies
+229,Develop business relationships
+230,Develop computer or information security policies or procedures
+231,Develop computer or information systems
+232,Develop content for sales presentations or other materials
+233,Develop contingency plans to deal with organisational emergencies
+234,Develop data analysis or data management procedures
+235,Develop database parameters or specifications
+236,Develop detailed project plans
+237,Develop diagrams or flow charts of system operation
+238,"Develop educational goals, standards, policies or procedures"
+239,Develop emergency procedures
+240,Develop environmental research methods
+241,Develop environmental sustainability plans or projects
+242,Develop financial plans for clients
+243,Develop guidelines for system implementation
+244,Develop information communication procedures
+245,Develop instructional materials
+246,Develop instructional objectives
+247,Develop library or archival databases
+248,Develop marketing plans or strategies
+249,Develop marketing plans or strategies for environmental initiatives
+250,Develop mathematical models of environmental conditions
+251,Develop methods of social or economic research
+252,Develop models of information or communications systems
+253,"Develop operating strategies, plans or procedures"
+254,Develop organisational goals or objectives
+255,Develop organisational methods or procedures
+256,Develop organisational policies or programs
+257,Develop performance metrics or standards related to information technology
+258,Develop plans for programs or services
+259,Develop plans to manage natural or renewable resources
+260,"Develop policies or procedures for archives, museums or libraries"
+261,Develop pricing forecasts and models
+262,Develop procedures for data entry or processing
+263,Develop procedures for data management
+264,Develop procedures to evaluate organisational activities
+265,Develop professional relationships or networks
+266,"Develop programs, policies or services that are culturally appropriate"
+267,Develop promotional materials
+268,Develop promotional strategies or plans
+269,Develop proposals for current or prospective customers
+270,"Develop safety standards, policies or procedures"
+271,Develop scientific or mathematical models
+272,Develop social media materials
+273,Develop software applications
+274,Develop specifications for computer network operation
+275,Develop specifications or procedures for website development or maintenance
+276,Develop strategies or programs for students with accessibility needs
+277,Develop surveying and land information systems
+278,Develop sustainable organisational policies or practices
+279,Develop technical methods or processes
+280,Develop technical specifications for systems or equipment
+281,Develop testing routines or procedures
+282,Develop training materials
+283,Devise research or testing protocols
+284,Direct activities of staff
+285,Direct administrative or support services
+286,Direct construction activities
+287,Direct department activities
+288,Direct design or development activities
+289,Direct energy production or management activities
+290,Direct environmental development activities
+291,Direct equipment maintenance or repair activities
+292,Direct facility maintenance or repair activities
+293,Direct financial operations
+294,Direct health care delivery programs
+295,Direct industrial production activities
+296,Direct installation activities
+297,"Direct organisational operations, projects or services"
+298,Direct quality control activities
+299,"Direct sales, marketing or customer service activities"
+300,Direct surveying activities
+301,Disassemble equipment to inspect for deficiencies
+302,Disburse funds from clients' accounts to creditors
+303,"Discuss business strategies, practices or policies with managers"
+304,Discuss design or technical features of goods or services with technical staff
+305,Discuss designs or plans with clients
+306,Discuss student progress with parents or guardians
+307,Distribute promotional literature or samples to customers
+308,Distribute resources to patrons or employees
+309,Document design or development procedures
+310,Document design or operational test results
+311,Document network-related activities or tasks
+312,Document operational activities
+313,Document operational procedures
+314,Document organisational or operational procedures
+315,Document technical design details
+316,Document technical specifications or requirements
+317,Document test results
+318,Draft legislation or regulations
+319,Draw detailed or technical illustrations
+320,Edit documents
+321,Edit written materials
+322,Educate clients on financial planning topics
+323,Enforce rules or policies governing student behaviour
+324,Enforce rules or regulations
+325,Ensure business strategies comply with information security standards
+326,Entertain public with performances
+327,Establish business management methods
+328,Establish interpersonal business relationships to facilitate work activities
+329,Establish nursing policies or standards
+330,Establish operational policies
+331,Establish organisational guidelines or policies
+332,Establish rules or policies governing student behaviour
+333,"Establish standards for products, processes or procedures"
+334,Estimate cost or material requirements
+335,Estimate costs for projects or productions
+336,Estimate costs of goods or services
+337,Estimate costs or terms of sales
+338,Estimate demand for goods or services
+339,Estimate green project costs
+340,"Estimate labour or resource requirements for forestry, fishing or agricultural operations"
+341,Estimate labour requirements
+342,Estimate operational costs
+343,Estimate technical or resource requirements for development or production projects
+344,Estimate time or monetary resources needed to complete projects
+345,Evaluate applicable laws and regulations to determine impact on organisational activities
+346,Evaluate characteristics of archival or historical objects
+347,Evaluate characteristics of equipment or systems
+348,Evaluate characteristics of products
+349,Evaluate civic projects or public policies
+350,Evaluate condition of properties
+351,Evaluate data quality
+352,Evaluate designs or specifications to ensure quality
+353,Evaluate effectiveness of staff policies or practices
+354,Evaluate employee performance
+355,Evaluate new technologies or methods
+356,Evaluate performance of educational staff
+357,Evaluate plans or specifications to determine technological or environmental implications
+358,"Evaluate potential of products, technologies or resources"
+359,Evaluate program effectiveness
+360,Evaluate project designs to determine adequacy or feasibility
+361,Evaluate quality of materials or products
+362,Evaluate scholarly materials
+363,Evaluate staff practices to ensure adherence to regulations
+364,Evaluate student work
+365,Evaluate technical data to determine effect on designs or plans
+366,"Evaluate training programs, instructors or materials"
+367,Evaluate utility of software or hardware technologies
+368,Examine condition of property or products
+369,Examine documents to verify adherence to requirements
+370,Examine financial records
+371,Examine financial records or processes
+372,Examine financial records to ensure compliance with policies or regulations
+373,Examine marketing materials to ensure compliance with policies or regulations
+374,Examine records or other types of data to investigate criminal activities
+375,Execute sales or other financial transactions
+376,"Explain engineering drawings, specifications or other technical information"
+377,Explain financial information to customers
+378,Explain project details to the general public
+379,"Explain regulations, policies or procedures"
+380,Explain technical product or service information to customers
+381,Fabricate products or components using machine tools
+382,"Forecast economic, political, social or financial trends"
+383,Gather customer or product information to determine customer needs
+384,Gather financial records
+385,Gather organisational performance information
+386,Gather physical survey data
+387,"Greet customers, patrons or visitors"
+388,Help patrons use library or archival resources
+389,Hire staff
+390,Identify information technology project resource requirements
+391,Identify investment opportunities or strategies
+392,Identify new applications for existing technologies
+393,Identify opportunities to improve operational efficiency
+394,Identify potential customers
+395,Identify security threats and determine counter measures
+396,Identify strategic business investment opportunities
+397,Implement advertising or marketing initiatives
+398,Implement design or process improvements
+399,Implement financial decisions
+400,Implement organisational process or policy changes
+401,Implement security measures for computer or information systems
+402,Incorporate green features into the design of structures or facilities
+403,Inform individuals or organisations of status or findings
+404,Inform others about laws or regulations
+405,"Inform viewers, listeners or audiences"
+406,"Inspect condition, or functioning, of facilities or equipment"
+407,Inspect equipment or systems
+408,Inspect equipment to ensure proper functioning
+409,Inspect facilities
+410,Inspect facilities or sites to determine if they meet specifications or standards
+411,Inspect facilities to ensure compliance with fire regulations
+412,"Inspect facilities, equipment or supplies to ensure conformance to standards"
+413,Inspect finished products to locate flaws
+414,Inspect locomotives or other railway equipment
+415,Inspect materials or equipment to determine need for repair or replacement
+416,Inspect operational processes
+417,Inspect work environments to ensure safety
+418,Install computer hardware
+419,Install computer software
+420,Install instrumentation or electronic equipment or systems
+421,Install production equipment or systems
+422,Instruct tertiary students in social sciences or humanities disciplines
+423,Interpret design or operational test results
+424,Interpret financial information for others
+425,Interpret research or operational data
+426,Interview clients to gather financial information
+427,"Interview employees, customers or others to collect information"
+428,Interview people to gather information about criminal activities
+429,Inventory materials or equipment
+430,Investigate illegal or suspicious activities
+431,Investigate industrial or transportation accidents
+432,Investigate legal issues
+433,Investigate safety of work environment
+434,"Investigate system, equipment or product failures"
+435,Investigate the environmental impact of projects
+436,"Issue money, credit or vouchers"
+437,Liaise between departments or other groups to improve function or communication
+438,Locate natural resources using geospatial or other environmental data
+439,"Maintain a working understanding of the cultural, diversity and accessibility needs of others, and how this applies to the role"
+440,Maintain client records
+441,Maintain computer hardware
+442,Maintain computer networks to enhance performance and user access
+443,Maintain contingency plans for disaster recovery
+444,Maintain current knowledge related to work activities
+445,Maintain data in information systems or databases
+446,Maintain electronic equipment
+447,Maintain financial or account records
+448,"Maintain food, drink or equipment inventories"
+449,"Maintain inventories of materials, equipment or products"
+450,Maintain inventory records
+451,Maintain knowledge of business operations
+452,Maintain knowledge of current developments in area of expertise
+453,Maintain knowledge of relevant national and international current events
+454,Maintain logs of production activities
+455,Maintain mechanical equipment
+456,Maintain operational records
+457,Maintain operational records or records systems
+458,Maintain professional knowledge or certifications
+459,Maintain records of customer accounts
+460,Maintain records of sales or other business transactions
+461,"Maintain records, documents or other files"
+462,Maintain regulatory or compliance documentation
+463,Maintain staff records
+464,Maintain test equipment
+465,Maintain the inventory of equipment
+466,Make devices or components
+467,Manage budgets for appropriate resource allocation
+468,Manage budgets for personal services operations
+469,Manage construction activities
+470,Manage content of broadcasts or presentations
+471,Manage control system activities in organisations
+472,Manage documentation to ensure organisation or accuracy
+473,Manage environmental sustainability projects
+474,Manage financial activities of the organisations
+475,Manage food service operations
+476,Manage guest services
+477,Manage health care operations
+478,Manage human resources activities
+479,Manage information technology projects or system activities
+480,Manage inventories of products or organisational resources
+481,"Manage operations, research or logistics projects"
+482,Manage organisational or project budgets
+483,Manage outreach activities
+484,Manage project risk
+485,"Market goods, services or events"
+486,Measure effectiveness of business strategies or practices
+487,Measure environmental characteristics
+488,Mediate disputes
+489,Mix sound inputs
+490,Modify software programs to improve performance
+491,Modify teaching methods or materials to accommodate student needs
+492,Monitor activities affecting environmental quality
+493,Monitor activities of individuals to ensure safety or compliance with rules
+494,Monitor availability of equipment or supplies
+495,Monitor business indicators
+496,Monitor computer system performance to ensure proper operation
+497,Monitor current trends
+498,Monitor equipment gauges or displays
+499,Monitor external affairs or events affecting business operations
+500,Monitor facilities or operational systems
+501,Monitor financial indicators
+502,Monitor flow of cash or other resources
+503,Monitor inventories
+504,Monitor market conditions or trends
+505,Monitor operational activities to ensure compliance with regulations or standard operating procedures
+506,Monitor operational quality or safety
+507,Monitor organisational compliance with regulations
+508,Monitor organisational procedures to ensure proper functioning
+509,Monitor patron activities to identify problems or potential problems
+510,Monitor performance of organisational members or partners
+511,Monitor processes for compliance with standards
+512,Monitor resources
+513,Monitor sales activities
+514,Monitor surroundings to detect potential hazards
+515,Monitor the performance of computer networks
+516,Monitor the productivity or efficiency of industrial operations
+517,Monitor the security of digital information
+518,Monitor work areas to provide security
+519,Negotiate agreements to resolve disputes
+520,"Negotiate contracts for transportation, distribution or logistics services"
+521,Negotiate contracts with clients or service providers
+522,Negotiate labour disputes
+523,Negotiate prices or other sales terms
+524,Negotiate purchases or contracts
+525,Negotiate sales or lease agreements for goods or services
+526,Notify others of equipment problems
+527,Observe individuals' activities to gather information or compile evidence
+528,Operate audio recording equipment
+529,Operate computer systems
+530,"Operate control consoles for sound, lighting or video"
+531,Operate gaming equipment
+532,Operate still or video cameras or related equipment
+533,Operate surveillance equipment to detect suspicious or illegal activities
+534,Order instructional or library materials or equipment
+535,"Order materials, supplies, or equipment"
+536,Organise informational materials
+537,Organise special events
+538,Oversee business processes
+539,Package materials for transport
+540,Participate in staffing decisions
+541,Perform administrative or clerical tasks
+542,Perform basic equipment maintenance
+543,Perform human resources activities
+544,Perform manual service or maintenance tasks
+545,Perform marketing activities
+546,"Plan and manage, and analyse costs and benefits of, proposed designs or projects"
+547,Plan community programs or activities for the general public
+548,Plan environmental research
+549,Plan facility layouts or designs
+550,Plan menu options
+551,Prepare analytical reports
+552,"Prepare contracts, disclosures or applications"
+553,Prepare data for analysis
+554,Prepare detailed work plans
+555,Prepare financial documents
+556,"Prepare financial documents, reports or budgets"
+557,Prepare forms or applications
+558,Prepare graphics or other visual representations of information
+559,Prepare information or documentation related to legal or regulatory matters
+560,Prepare instruction manuals
+561,Prepare investigation or incident reports
+562,"Prepare materials for preservation, storage or display"
+563,Prepare materials for processing
+564,Prepare operational budgets
+565,Prepare operational progress or status reports
+566,Prepare operational reports
+567,Prepare operational reports or records
+568,Prepare procedural documents
+569,Prepare production storyboards
+570,Prepare project budgets
+571,Prepare proposal documents
+572,Prepare proposal documents or grant applications
+573,Prepare proposals or grant applications to obtain project funding
+574,Prepare regulatory or compliance documentation
+575,Prepare reports detailing student activities or performance
+576,Prepare reports related to compliance matters
+577,Prepare research or technical reports
+578,Prepare research reports
+579,Prepare sales or other contracts
+580,Prepare scientific or technical reports or presentations
+581,Prepare staff schedules or work assignments
+582,Prepare technical or operational reports
+583,Prepare technical reports for internal use
+584,Prepare tests
+585,Present business-related information
+586,Present information to the public
+587,Present research results
+588,Present work to clients for approval
+589,Process library materials
+590,Process medical billing information
+591,Process sales or other transactions
+592,Procure goods or services
+593,"Procure materials, equipment or other resources"
+594,Procure stocks of merchandise or supplies
+595,Promote educational institutions or programs
+596,Promote environmental sustainability or conservation initiatives
+597,"Promote goods, services, or programs"
+598,"Promote products, activities, or organisations"
+599,Provide attraction or event information to patrons
+600,"Provide basic information to guests, visitors, or clients"
+601,Provide customer service to clients or users
+602,Provide customers with general information or assistance
+603,Provide educational information to the public
+604,Provide information to co-workers
+605,Provide information to the general public
+606,Provide leadership to align operational activities with the organisation’s vision and goals
+607,Provide mentorship and guidance to staff
+608,Provide recommendations to others about computer hardware or software
+609,Provide technical assistance to clients or users
+610,Provide technical guidance to other staff
+611,Provide technical support for computer network issues
+612,Provide technical support for software maintenance or use
+613,Publish content on digital platforms or social media sites
+614,Read documents to gather technical information
+615,Reassemble equipment after repair
+616,Receive information or instructions for performing work assignments
+617,Recommend changes to improve computer or information systems
+618,Recommend goods or services to customers
+619,Recommend investments to clients
+620,Recommend organisational process or policy changes
+621,"Recommend technical design or process changes to improve efficiency, quality or performance"
+622,Reconcile records of sales or other financial transactions
+623,"Record information about parts, materials or repair procedures"
+624,Record information about suspects or criminals
+625,Record operational or production data
+626,Record personnel information
+627,Record research or operational data
+628,Recruit staff
+629,Repair precision devices or work pieces
+630,Report information to managers or other staff
+631,Report maintenance or equipment problems to appropriate personnel
+632,Represent the organisation in external relations
+633,Research advanced engineering designs or applications
+634,Research design or application of green technologies
+635,Research engineering applications of emerging technologies
+636,Research engineering aspects of biological or chemical processes
+637,Research environmental impact of industrial or development activities
+638,Research human performance or health factors related to engineering or design activities
+639,Research impacts of environmental conservation initiatives
+640,Research industrial processes or operations
+641,Research issues related to the environment or sustainable business practices
+642,Research new technologies
+643,Research product safety
+644,Research social issues
+645,Research sustainable agricultural processes or practices
+646,Research topics in area of expertise
+647,Resolve computer network problems
+648,Resolve computer software problems
+649,Resolve customer complaints or problems
+650,Resolve employee or contractor problems
+651,Resolve operational performance problems
+652,Respond to customer inquiries
+653,Respond to customer problems or complaints
+654,Respond to cyber attacks and restore protection to systems if compromised
+655,Retrieve information from electronic sources
+656,Review accuracy of sales or other transactions
+657,Review art or design materials
+658,Review blueprints or specifications to determine work requirements
+659,"Review computer information systems, procedures and networks"
+660,Review details of technical drawings or specifications
+661,Review documents or materials for compliance with policies or regulations
+662,"Review environmental permits, plans or reports"
+663,Review laws or regulations to maintain professional knowledge
+664,Review license or permit applications
+665,Review plans or proposals for environmental conservation
+666,Review professional literature to maintain professional knowledge
+667,Review technical documents to plan work
+668,Schedule activities or facility use
+669,Schedule appointments
+670,Schedule operational activities
+671,Schedule product or material transportation
+672,Schedule release of marketing content
+673,"Search files, databases or reference materials to obtain information"
+674,Search information sources to find data
+675,Select educational materials or equipment
+676,Select materials or props
+677,Select project materials
+678,"Select tools, equipment, or technologies for use in operations or projects"
+679,Sell goods or services
+680,"Send information, materials or documentation"
+681,Serve food or drinks
+682,Serve on institutional or departmental committees
+683,Set up merchandise displays
+684,Share sales-related or market information with colleagues
+685,Signal others to coordinate vehicle movement
+686,Stay informed about current developments in field of specialisation
+687,Stock products or parts
+688,Study product information to acquire professional knowledge
+689,Study scripts to determine project requirements
+690,Submit financial applications
+691,Supervise clerical or administrative staff
+692,Supervise employees
+693,Supervise engineering or other technical staff
+694,Supervise information technology staff
+695,Supervise medical support staff
+696,Supervise production or support staff
+697,Supervise sales or support staff
+698,Supervise scientific or technical staff
+699,Supervise service workers
+700,Supervise trainees
+701,Survey land or bodies of water
+702,Teach classes in area of specialisation
+703,Teach in area of specialisation
+704,Teach others to use computer equipment or hardware
+705,Teach others to use technology or equipment
+706,Teach safety standards or environmental compliance methods
+707,Test characteristics of materials or structures
+708,Test computer hardware performance
+709,Test computer system operations to ensure proper functioning
+710,Test facilities for environmental hazards
+711,"Test performance of electrical, electronic, mechanical, or integrated systems or equipment"
+712,Test products for functionality or quality
+713,Test software performance
+714,Testify at legal or legislative proceedings
+715,"Train employees on environmental awareness, conservation or safety topics"
+716,Train food preparation or food service staff
+717,Train managerial staff
+718,Train medical providers
+719,Train others in computer interface or software use
+720,Train others in cyber security issues
+721,Train others on work processes
+722,Train sales staff
+723,Train service staff
+724,Train staff
+725,Train staff in organisational or compliance procedures
+726,Train staff members
+727,Train staff on proper operational procedures
+728,Train staff to improve their skills
+729,Troubleshoot equipment or systems operation problems
+730,Troubleshoot issues with computer applications or systems
+731,Update computer database information
+732,Update knowledge about emerging industry or technology trends
+733,Update knowledge of legal or regulatory environments
+734,Update professional knowledge
+735,Update technical knowledge
+736,Update website content
+737,Use databases to locate investigation details or other information
+738,Verify accuracy of data
+739,Verify accuracy of financial information
+740,Verify accuracy of patient information
+741,Verify accuracy of records
+742,Verify application data to determine program eligibility
+743,Verify customer credit information
+744,Verify mathematical calculations
+745,Visit establishments to evaluate needs or to promote products or service sales
+746,Write advertising or promotional material
+747,"Write articles, books or other materials"
+748,Write computer programming code
+749,Write grant proposals
+750,Write informational material
+751,Write reports or evaluations
