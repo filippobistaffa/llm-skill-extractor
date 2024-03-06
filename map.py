@@ -16,10 +16,9 @@ def get_embedding(text, model='text-embedding-3-small'):
 
 
 def cosine_similarity(a, b):
-    #print(a)
-    #print(b)
+    if len(a) != len(b):
+        raise ValueError(f'Arrays of different lengths: {len(a)} != {len(b)}')
     cos_sim = np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
-    #print(cos_sim)
     return cos_sim
 
 
