@@ -1,0 +1,3 @@
+hugginface-hub
+openai
+pandas
