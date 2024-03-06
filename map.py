@@ -18,7 +18,8 @@ def get_embedding(text, model='text-embedding-3-small'):
 def cosine_similarity(a, b):
     if len(a) != len(b):
         raise ValueError(f'Arrays of different lengths: {len(a)} != {len(b)}')
-    cos_sim = np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
+    #cos_sim = np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
+    cos_sim = np.dot(a, b) # assumes that np.linalg.norm(a) == np.linalg.norm(b) == 1 (holds in case of OpenAI embeddings)
     return cos_sim
 
 
