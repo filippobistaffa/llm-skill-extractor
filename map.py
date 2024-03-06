@@ -26,7 +26,7 @@ def cosine_similarity(a, b):
 if __name__ == "__main__":
     parser = ap.ArgumentParser()
     parser.add_argument('--embeddings', type=str, default=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'skills-embeddings-3-small.tar.gz'))
-    parser.add_argument('--skills', type=str, default=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'clean-0.csv'))
+    parser.add_argument('--skills', type=str, default=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data/clean-0.csv'))
     parser.add_argument('--model', type=str, default='text-embedding-3-small', choices=['text-embedding-3-small', 'text-embedding-3-large'])
     parser.add_argument('-n', type=int, default=5)
     parser.add_argument('--output', type=str)
