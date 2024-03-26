@@ -1,3 +1,4 @@
 huggingface-hub
 openai
 pandas
+llama-cpp-python -C cmake.args="-DLLAMA_BLAS=ON;-DLLAMA_BLAS_VENDOR=OpenBLAS"
