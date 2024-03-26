@@ -34,10 +34,6 @@ if __name__ == "__main__":
         verbose = args.verbose,
     )
 
-    output = llm(
-        prompt,
-        max_tokens = -1,
-        stop = ['</s>'],
-    )
-
+    # generate and print output
+    output = llm(prompt, max_tokens=-1, stop=['</s>'])
     print(output['choices'][0]['text'])
