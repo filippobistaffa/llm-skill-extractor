@@ -17,4 +17,4 @@ then
     module load pandas
 fi
 
-python3 description.py --model "llama.cpp/models/vicuna-13b-v1.5-16k.Q4_K_M.gguf" --format "USER: {}\nASSISTANT:" --seed $RANDOM
+python3 description.py --model "models/vicuna-13b-v1.5-16k.Q4_K_M.gguf" --seed $RANDOM

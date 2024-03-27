@@ -17,4 +17,4 @@ then
     module load pandas
 fi
 
-python3 description.py --model "llama.cpp/models/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf" --format "[INST] {} [/INST]" --seed $RANDOM
+python3 description.py --model "models/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf" --seed $RANDOM
