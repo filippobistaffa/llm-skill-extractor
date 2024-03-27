@@ -18,5 +18,5 @@ then
 fi
 
 cmd=label-mixtral-$SLURM_JOB_ID.cmd
-srun python3 label.py --model "llama.cpp/models/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf" --format "[INST] {} [/INST]" --cmd $cmd
+srun python3 label.py --model "models/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf" --cmd $cmd
 bash $cmd
