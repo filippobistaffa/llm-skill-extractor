@@ -8,29 +8,38 @@ import os
 
 if __name__ == "__main__":
 
-    llama_cpp_subdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'llama.cpp')
-
     # parse command-line arguments
     parser = ap.ArgumentParser()
     parser.add_argument('--skills_dataset', type=str, default=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'skills.txt'))
     parser.add_argument('--n_skills', type=int, default=3)
-    parser.add_argument('--model', type=str, default=os.path.join(llama_cpp_subdir, 'models', 'mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf'))
-    parser.add_argument('--format', type=str, default='[INST] {} [/INST]')
-    parser.add_argument('--seed', type=int, default=0)
+    parser.add_argument('--model', type=str, default=os.path.join('models', 'mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf'))
+    parser.add_argument('--ctx', type=int, default=2048)
+    parser.add_argument('--seed', type=int, default=4294967295) # default llama seed
     args, additional = parser.parse_known_args()
+
+    # detect chat format
+    predefined_chat_formats = {
+        'mixtral': '[INST] {} [/INST]',
+        'vicuna': 'USER: {}\nASSISTANT:',
+        'gemma': '<start_of_turn>user\n{}<end_of_turn>\n<start_of_turn>model',
+    }
+    chat_format = ''
+    for model, predefined_format in predefined_chat_formats.items():
+        if model in args.model:
+            chat_format = predefined_format
 
     # build prompt
     np.random.seed(args.seed)
     skills_list = pd.read_csv(args.skills_dataset, sep='\t', header=None).values.ravel()
     skills_sample = np.random.choice(skills_list, size=args.n_skills)
     skills_string = ', '.join(skills_sample[:-1]).lower() + ', and ' + skills_sample[-1].lower()
-    prompt = f'Give me the description of a professional course to learn how to {skills_string}'
-    prompt_format = args.format.format(prompt)
-    
+    prompt = f'Give me the description of a professional course to learn how to {skills_string}.'
+    prompt_format = chat_format.format(prompt)
+
     # llama.cpp parameters
     llama_cpp_params = {
         '--model': args.model,
-        '--ctx-size': str(len(prompt_format)),
+        '--ctx-size': str(args.ctx),
         '--seed': str(args.seed),
         '--prompt': prompt_format,
         '--repeat_penalty': '1.1',
@@ -39,7 +48,8 @@ if __name__ == "__main__":
     }
 
     # build subprocess (llama.cpp) command-line
-    command_line = [os.path.join(llama_cpp_subdir, 'build', 'bin' ,'main'), '--escape', '--log-disable']
+    llama_cpp_subdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'llama.cpp')
+    command_line = [os.path.join(llama_cpp_subdir, 'build', 'bin' ,'main'), '--escape']
     for (param, value) in llama_cpp_params.items():
         command_line.extend([param, value])
     command_line.extend(additional) # by putting additional at the end we can override the default ones
