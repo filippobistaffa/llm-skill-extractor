@@ -26,9 +26,21 @@ if __name__ == "__main__":
     skills_string = ', '.join(skills_sample[:-1]).lower() + ', and ' + skills_sample[-1].lower()
     prompt = f'Give me the description of a professional course to learn how to {skills_string}.'
 
+    # detect chat format
+    predefined_chat_formats = {
+        'mixtral': 'mistralai-instruct',
+        'vicuna': 'vicuna',
+        'gemma': 'gemma',
+    }
+    chat_format = ''
+    for model, predefined_format in predefined_chat_formats.items():
+        if model in args.model:
+            chat_format = predefined_format
+
     # build LLM
     llm = llama_cpp.Llama(
         model_path = args.model,
+        chat_format = chat_format,
         n_threads = args.threads,
         seed = args.seed,
         n_ctx = args.ctx,
@@ -37,5 +49,5 @@ if __name__ == "__main__":
     )
 
     # generate and print output
-    output = llm(prompt, max_tokens=-1, stop=['</s>'])
+    output = llm(prompt, max_tokens=-1)
     print(output['choices'][0]['text'])
