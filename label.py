@@ -34,7 +34,7 @@ if __name__ == "__main__":
     with open(args.description) as f:
         description = f'' + ''.join(f.readlines()).strip()
 
-    prompt = f'Which of professional skills can be aquired by following course:\n{description}'
+    prompt = f'Which of the specialist tasks in the Australian Skills Framework are most related to the following course:\n{description}'
     prompt_format = ('"' + chat_format + '"').format(prompt).replace("\n", "\\n").replace("\t", "\\t")
 
     # llama.cpp parameters
