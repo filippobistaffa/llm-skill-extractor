@@ -15,6 +15,7 @@ if __name__ == "__main__":
     parser.add_argument('--seed', type=int, default=llama_cpp.LLAMA_DEFAULT_SEED)
     parser.add_argument('--ctx', type=int, default=2048)
     parser.add_argument('--threads', type=int)
+    parser.add_argument('--gpu-layers', type=int)
     parser.add_argument('--verbose', action='store_true')
     args, additional = parser.parse_known_args()
 
@@ -32,6 +33,7 @@ if __name__ == "__main__":
         seed = args.seed,
         n_ctx = args.ctx,
         verbose = args.verbose,
+        n_gpu_layers = args.gpu_layers
     )
 
     # generate and print output
