@@ -18,5 +18,5 @@ then
 fi
 
 cmd=label-gemma-$SLURM_JOB_ID.cmd
-srun python3 label.py --model "llama.cpp/models/gemma-7b-it-Q4_K_M.gguf" --format "<start_of_turn>user\n{}<end_of_turn>\n<start_of_turn>model" --cmd $cmd
+srun python3 label.py --model "models/gemma-7b-it-Q4_K_M.gguf"
 bash $cmd
