@@ -12,12 +12,23 @@ if __name__ == "__main__":
     parser.add_argument('--skills_dataset', type=str, default=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'skills.txt'))
     parser.add_argument('--n_skills', type=int, default=3)
     parser.add_argument('--model', type=str, default=os.path.join('models', 'mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf'))
-    parser.add_argument('--seed', type=int, default=llama_cpp.LLAMA_DEFAULT_SEED)
+    parser.add_argument('--seed', type=int, default=0)
     parser.add_argument('--ctx', type=int, default=2048)
     parser.add_argument('--threads', type=int)
     parser.add_argument('--gpu-layers', type=int, default=0)
     parser.add_argument('--verbose', action='store_true')
     args, additional = parser.parse_known_args()
+
+    # detect chat format
+    predefined_chat_formats = {
+        'mixtral': '[INST] {} [/INST]',
+        'vicuna': 'USER: {}\nASSISTANT:',
+        'gemma': '<start_of_turn>user\n{}<end_of_turn>\n<start_of_turn>model',
+    }
+    chat_format = ''
+    for model, predefined_format in predefined_chat_formats.items():
+        if model in args.model:
+            chat_format = predefined_format
 
     # build prompt
     np.random.seed(args.seed)
@@ -25,27 +36,17 @@ if __name__ == "__main__":
     skills_sample = np.random.choice(skills_list, size=args.n_skills)
     skills_string = ', '.join(skills_sample[:-1]).lower() + ', and ' + skills_sample[-1].lower()
     prompt = f'Give me the description of a professional course to learn how to {skills_string}.'
-
-    # detect chat format
-    predefined_chat_formats = {
-        'mixtral': 'mistralai-instruct',
-        'vicuna': 'vicuna',
-        'gemma': 'gemma',
-    }
-    chat_format = ''
-    for model, predefined_format in predefined_chat_formats.items():
-        if model in args.model:
-            chat_format = predefined_format
+    prompt_format = chat_format.format(prompt)
 
     # build LLM
     llm = llama_cpp.Llama(
         model_path = args.model,
-        chat_format = chat_format,
         n_threads = args.threads,
         seed = args.seed,
         n_ctx = args.ctx,
         verbose = args.verbose,
-        n_gpu_layers = args.gpu_layers
+        n_gpu_layers = args.gpu_layers,
+        chat_format = ''
     )
 
     # generate and print output
