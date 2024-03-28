@@ -28,7 +28,7 @@ if __name__ == "__main__":
     }
     for model, model_format in model_formats.items():
         if model in args.model:
-            prompt_format = model_format.format(prompt)
+            prompt_format = ('"' + model_format + '"').format(prompt).replace("\n", "\\n").replace("\t", "\\t")
 
     # llama.cpp parameters
     llama_cpp_params = {
