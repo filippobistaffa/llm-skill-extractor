@@ -15,22 +15,20 @@ if __name__ == "__main__":
     parser.add_argument('--cmd', type=str, default='cmd.sh')
     args, additional = parser.parse_known_args()
 
-    # detect chat format
-    predefined_chat_formats = {
-        'mixtral': '[INST] {} [/INST]',
-        'vicuna': 'USER: {}\nASSISTANT:',
-        'gemma': '<start_of_turn>user\n{}<end_of_turn>\n<start_of_turn>model',
-    }
-    chat_format = ''
-    for model, predefined_format in predefined_chat_formats.items():
-        if model in args.model:
-            chat_format = predefined_format
-
     # build prompt
     with open(args.description) as f:
         description = f'' + ''.join(f.readlines()).strip()
     prompt = f'Which of the specialist tasks in the Australian Skills Framework are most related to the following course?\n{description}'
-    prompt_format = ('"' + chat_format + '"').format(prompt).replace("\n", "\\n").replace("\t", "\\t")
+
+    # format prompt according to the model
+    model_formats = {
+        'mixtral': '[INST] {} [/INST]',
+        'vicuna': 'USER: {}\nASSISTANT:',
+        'gemma': '<start_of_turn>user\n{}<end_of_turn>\n<start_of_turn>model',
+    }
+    for model, model_format in model_formats.items():
+        if model in args.model:
+            prompt_format = model_format.format(prompt)
 
     # llama.cpp parameters
     llama_cpp_params = {

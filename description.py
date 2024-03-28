@@ -17,24 +17,22 @@ if __name__ == "__main__":
     parser.add_argument('--seed', type=int, default=0)
     args, additional = parser.parse_known_args()
 
-    # detect chat format
-    predefined_chat_formats = {
-        'mixtral': '[INST] {} [/INST]',
-        'vicuna': 'USER: {}\nASSISTANT:',
-        'gemma': '<start_of_turn>user\n{}<end_of_turn>\n<start_of_turn>model',
-    }
-    chat_format = ''
-    for model, predefined_format in predefined_chat_formats.items():
-        if model in args.model:
-            chat_format = predefined_format
-
     # build prompt
     np.random.seed(args.seed)
     skills_list = pd.read_csv(args.skills_dataset, sep='\t', header=None).values.ravel()
     skills_sample = np.random.choice(skills_list, size=args.n_skills)
     skills_string = ', '.join(skills_sample[:-1]).lower() + ', and ' + skills_sample[-1].lower()
     prompt = f'Give me the description of a professional course to learn how to {skills_string}.'
-    prompt_format = chat_format.format(prompt)
+
+    # format prompt according to the model
+    model_formats = {
+        'mixtral': '[INST] {} [/INST]',
+        'vicuna': 'USER: {}\nASSISTANT:',
+        'gemma': '<start_of_turn>user\n{}<end_of_turn>\n<start_of_turn>model',
+    }
+    for model, model_format in model_formats.items():
+        if model in args.model:
+            prompt_format = model_format.format(prompt)
 
     # llama.cpp parameters
     llama_cpp_params = {
