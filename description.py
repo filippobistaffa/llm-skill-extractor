@@ -9,14 +9,18 @@ if __name__ == "__main__":
 
     # parse command-line arguments
     parser = ap.ArgumentParser()
-    parser.add_argument('--skills_dataset', type=str, default=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'skills.txt'))
-    parser.add_argument('--n_skills', type=int, default=3)
-    parser.add_argument('--model', type=str, default=os.path.join('models', 'mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf'))
-    parser.add_argument('--seed', type=int, default=0)
-    parser.add_argument('--ctx', type=int, default=2048)
-    parser.add_argument('--threads', type=int)
-    parser.add_argument('--gpu-layers', type=int, default=0)
-    parser.add_argument('--verbose', action='store_true')
+    group_io = parser.add_argument_group('input/output arguments')
+    group_model = parser.add_argument_group('model arguments')
+    group_paral = parser.add_argument_group('parallelization arguments')
+    group_io.add_argument('--skills_dataset', type=str, default=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'skills.txt'))
+    group_io.add_argument('--n_skills', type=int, default=3)
+    group_io.add_argument('--verbose', action='store_true')
+    group_model.add_argument('--model', type=str, default=os.path.join('models', 'mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf'))
+    group_model.add_argument('--seed', type=int, default=0)
+    group_model.add_argument('--ctx', type=int, default=2048)
+    group_paral.add_argument('--threads', type=int)
+    group_paral.add_argument('--threads-batch', type=int)
+    group_paral.add_argument('--gpu-layers', type=int, default=0)
     args, additional = parser.parse_known_args()
 
     # build prompt
@@ -40,6 +44,7 @@ if __name__ == "__main__":
     llm = llama_cpp.Llama(
         model_path = args.model,
         n_threads = args.threads,
+        n_threads_batch = args.threads_batch,
         seed = args.seed,
         n_ctx = args.ctx,
         verbose = args.verbose,
