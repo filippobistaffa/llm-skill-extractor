@@ -11,7 +11,7 @@ if __name__ == "__main__":
     parser.add_argument('--description', type=str, default=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'description.txt'))
     parser.add_argument('--model', type=str, default=os.path.join('models', 'mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf'))
     parser.add_argument('--ctx', type=int, default=2048)
-    parser.add_argument('--seed', type=int, default=4294967295) # default llama seed
+    parser.add_argument('--seed', type=int, default=0)
     parser.add_argument('--cmd', type=str, default='cmd.sh')
     args, additional = parser.parse_known_args()
 

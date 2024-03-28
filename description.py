@@ -14,7 +14,7 @@ if __name__ == "__main__":
     parser.add_argument('--n_skills', type=int, default=3)
     parser.add_argument('--model', type=str, default=os.path.join('models', 'mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf'))
     parser.add_argument('--ctx', type=int, default=2048)
-    parser.add_argument('--seed', type=int, default=4294967295) # default llama seed
+    parser.add_argument('--seed', type=int, default=0)
     args, additional = parser.parse_known_args()
 
     # detect chat format
