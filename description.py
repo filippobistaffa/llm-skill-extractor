@@ -50,5 +50,5 @@ if __name__ == "__main__":
     )
 
     # generate and print output
-    output = llm(prompt, max_tokens=-1)
+    output = llm(prompt_format, max_tokens=-1)
     print(output['choices'][0]['text'])
