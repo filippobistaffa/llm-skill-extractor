@@ -30,8 +30,6 @@ if __name__ == "__main__":
             chat_format = predefined_format
 
     # build prompt
-    skills_list = pd.read_csv(args.skills_dataset, sep='\t', header=None).values.ravel()
-    skills_string = '- ' + '\n- '.join(skills_list) + '\n'
     with open(args.description) as f:
         description = f'' + ''.join(f.readlines()).strip()
     prompt = f'Which of the specialist tasks in the Australian Skills Framework are most related to the following course?\n{description}'
