@@ -8,7 +8,6 @@ if __name__ == "__main__":
 
     # parse command-line arguments
     parser = ap.ArgumentParser()
-    parser.add_argument('--skills_dataset', type=str, default=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'skills.txt'))
     parser.add_argument('--description', type=str, default=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'description.txt'))
     parser.add_argument('--model', type=str, default=os.path.join('models', 'mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf'))
     parser.add_argument('--ctx', type=int, default=2048)
@@ -28,13 +27,9 @@ if __name__ == "__main__":
             chat_format = predefined_format
 
     # build prompt
-    skills_list = pd.read_csv(args.skills_dataset, sep='\t', header=None).values.ravel()
-    skills_string = '- ' + '\n- '.join(skills_list) + '\n'
-
     with open(args.description) as f:
         description = f'' + ''.join(f.readlines()).strip()
-
-    prompt = f'Which of the specialist tasks in the Australian Skills Framework are most related to the following course:\n{description}'
+    prompt = f'Which of the specialist tasks in the Australian Skills Framework are most related to the following course?\n{description}'
     prompt_format = ('"' + chat_format + '"').format(prompt).replace("\n", "\\n").replace("\t", "\\t")
 
     # llama.cpp parameters
