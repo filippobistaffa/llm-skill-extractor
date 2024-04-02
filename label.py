@@ -18,17 +18,21 @@ if __name__ == "__main__":
     # build prompt
     with open(args.description) as f:
         description = f'' + ''.join(f.readlines()).strip()
-    prompt = f'Which of the specialist tasks in the Australian Skills Framework are most related to the following course?\n{description}'
+    prompt = f'Which of the specialist tasks in the Australian Skills Framework are most related to the following course?'
 
     # format prompt according to the model
     model_formats = {
-        'mixtral': '[INST] {} [/INST]',
-        'vicuna': 'USER: {}\nASSISTANT:',
-        'gemma': '<start_of_turn>user\n{}<end_of_turn>\n<start_of_turn>model',
+        'mixtral': '[INST] {prompt}\n{description} [/INST]',
+        'vicuna': 'USER: {prompt}\n{description}\nASSISTANT:',
+        'gemma': '<start_of_turn>user\n{prompt}\n{description}}<end_of_turn>\n<start_of_turn>model',
+        'command-r': '## Instructions\n{prompt}\n## Input Text\n{description}',
     }
     for model, model_format in model_formats.items():
         if model in args.model:
-            prompt_format = ('"' + model_format + '"').format(prompt).replace("\n", "\\n").replace("\t", "\\t")
+            prompt_format = ('"' + model_format + '"').format(
+                prompt = prompt,
+                description = description
+            ).replace("\n", "\\n").replace("\t", "\\t")
 
     # llama.cpp parameters
     llama_cpp_params = {
