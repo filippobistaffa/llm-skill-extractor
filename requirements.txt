@@ -1,3 +1,4 @@
 huggingface-hub
+python-dotenv
 openai
 pandas
