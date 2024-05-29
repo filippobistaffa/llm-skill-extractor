@@ -1,9 +1,40 @@
-This self paced course provides an introduction to AI, its impact on society, automation concepts and techniques and why AI is so special.
-Who is this course for? This course is aimed at learners who have an interest in AI and relevant emerging technologies and how they impact on, and co-evolute with, society. 
-What will you learn? By the end of this course you will have an understanding of big data and IoT as strengths of AI and how emerging relevant technologies are revolutionising the AI systems.
-Topics overview: Some of the topics covered include narrow AI, augmented intelligence, emerging automation techniques and how AI impacts society
-How much time you need to invest: Completing the course should take  approximately four (4) hours 
-Prerequisites: There are no prerequisites for entry to this module 
-Course Certificate: A course certificate will be generated on the successful completion of the final quiz 
-Course Developers: Based on the book by: Shnurenko, I; Murovana T; Kushchu I. UNESCO Institute for Information Technologies in Education in cooperation with TheNextMinds 
-Course Contact: In case of technical troubleshooting or questions, please reach out to fairforward@giz.de 
+Title: Formal Financial Accounting 
+  
+There are 5 modules in this course
+This course builds upon what you learned in Financial Accounting: Foundations and Financial Accounting: Advanced Topics and introduces you to formal foundations of financial accounting. The main purpose of the course is to familiarize you with technical terms in financial accounting, such as debit, credit and T-account. While knowledge on technical aspects of financial accounting is not necessary to understand and interpret financial statements, this knowledge is critical to be able to understand advanced topics in accounting. Formal Financial Accounting is a prerequisite course for the University of Illinois' iMSA program and the terminology we will cover will be used throughout the courses in iMSA program.
+The University of Illinois at Urbana-Champaign, consistently ranked as one of the nation's top three accounting programs, now offers a master’s in accounting at a very affordable tuition rate and is completely online. The iMSA is a full Master of Accountancy program and students graduate with a highly recognized master degree. Try an open course or two, then apply for admission into the credit-bearing version, as you may be eligible to take credit-bearing courses during the application process. If you are missing any prerequisites for the full degree, you can complete Coursera courses to demonstrate readiness and strengthen your application for the iMSA. For more information on this exciting online master's in accounting program, refer to this link: https://www.coursera.org/university-programs/imsa
+Read more
+Course Orientation
+Module 1
+•
+1 hour to complete
+Module details
+In this module, you will become familiar with the course, your instructor, your classmates, and your learning environment. This orientation will also help you obtain the technical skills required to navigate and be successful in this course.
+
+Module 1: Introduction to Financial Accounting Terminology
+Module 2
+•
+2 hours to complete
+Module details
+Accounting is the language of business. Managers communicate results of operations within a firm through accounting to various financial information users including investors and creditors. The main purpose of this module is to familiarize you with technical terms in financial accounting such as debit, credit, and T-account.
+
+Module 2: Formal Financial Accounting for Assets
+Module 3
+•
+2 hours to complete
+Module details
+One of the major components of a balance sheet is assets. Accounts receivables, inventories, and plant, property, and equipment constitute a major part of the assets. Understanding accounting for these accounts will help you uncover how these accounts change over time, their valuation, and their usefulness in managerial decision making.
+
+Module 3: Formal Financial Accounting for Liabilities and Shareholders’ Equity
+Module 4
+•
+2 hours to complete
+Module details
+The major sources of financing for many firms are liabilities and equity. Firms routinely finance their operations through various liabilities including accounts payables, bank loans, and bonds. They also raise funds from their investors through IPOs and SEOs. Finally, retained earnings (earnings earned but not distributed to investors) constitute a significant source of financing. Accounting for liabilities and shareholders’ equity will help you understand how formal financial accounting for liabilities and shareholders’ equity accounts are conducted.
+
+Module 4: Applications of Formal Financial Accounting
+Module 5
+•
+1 hour to complete
+Module details
+The accounting cycle starts with financial transactions, and continues with journalizing these transactions and posting the journal entries on the ledger. At the end of the year, the trial balance is prepared. The final step is to prepare financial statements from trial balance numbers. This module will go over a comprehensive exercise, which will track the accounting cycle of a firm from its establishment until its fiscal year-end financial statements.
