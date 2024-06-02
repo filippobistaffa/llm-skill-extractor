@@ -1,4 +1,5 @@
 huggingface-hub
 python-dotenv
+mistralai
 openai
 pandas
