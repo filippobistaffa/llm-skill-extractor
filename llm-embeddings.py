@@ -47,6 +47,7 @@ if __name__ == '__main__':
     with open(args.description) as f:
         description = f'' + ''.join(f.readlines()).strip()
     prompt = f'Output a list of {args.n} specialist tasks taken from the Australian Skill Framework that are related to the following course:\n{description}'
+    instructions = 'Answer only with a numbered list of skills, nothing else.'
 
     if args.llm.startswith('gpt'):
         # refer to https://platform.openai.com/docs/api-reference/chat
@@ -55,7 +56,7 @@ if __name__ == '__main__':
             temperature=args.temperature,
             messages=[
                 {'role': 'user', 'content': prompt},
-                {'role': 'system', 'content': 'Answer only with a numbered list of skills, nothing else.'},
+                {'role': 'system', 'content': instructions},
             ]
         ).choices[0].message.content
     else:
@@ -68,7 +69,7 @@ if __name__ == '__main__':
             temperature=args.temperature,
             messages=[
                 ChatMessage(role='user', content=prompt),
-                ChatMessage(role='system', content='Answer only with a numbered list of skills, nothing else.')
+                ChatMessage(role='system', content=instructions)
             ]
         ).choices[0].message.content
 
