@@ -37,7 +37,7 @@ if __name__ == '__main__':
         'mistral-large-latest',
     ])
     parser.add_argument('--embeddings', type=str, default='small', choices=['small', 'large'])
-    parser.add_argument('--temperature', type=float, default=0) # should be 0 <= temperature <= 2
+    parser.add_argument('--temperature', type=float, default=0) # should be 0 <= t <= 2 for OpenAI, 0 <= t <= 1 for Mistral AI
     parser.add_argument('-n', type=int, default=5)
     parser.add_argument('-k', type=int, default=5)
     parser.add_argument('--json', type=str)
