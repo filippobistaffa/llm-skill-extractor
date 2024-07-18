@@ -25,10 +25,11 @@ def cosine_similarity(a, b):
 if __name__ == '__main__':
     parser = ap.ArgumentParser()
     parser.add_argument('--description', type=str, default=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'description.txt'))
-    parser.add_argument('--llm', type=str, default='gpt-3.5-turbo', choices=[
+    parser.add_argument('--llm', type=str, default='gpt-4o-mini', choices=[
         # OpenAI
         'gpt-3.5-turbo',
         'gpt-4o',
+        'gpt-4o-mini',
         # Mistral AI
         'open-mistral-7b',
         'open-mixtral-8x7b',
