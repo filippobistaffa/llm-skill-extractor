@@ -9,11 +9,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from openai import OpenAI
-oaclient = OpenAI()
+emb_oaclient = OpenAI()
+llm_oaclient = OpenAI()
 
 def get_embedding(text, model='text-embedding-3-small'):
    text = text.replace('\n', ' ')
-   return np.array(oaclient.embeddings.create(input=[text], model=model).data[0].embedding)
+   return np.array(emb_oaclient.embeddings.create(input=[text], model=model).data[0].embedding)
 
 def cosine_similarity(a, b):
     if len(a) != len(b):
@@ -36,6 +37,8 @@ if __name__ == '__main__':
         'open-mixtral-8x22b',
         'mistral-small-latest',
         'mistral-large-latest',
+        # DeepSeek
+        'deepseek-chat',
     ])
     parser.add_argument('--embeddings', type=str, default='small', choices=['small', 'large'])
     parser.add_argument('--temperature', type=float, default=0) # should be 0 <= t <= 2 for OpenAI, 0 <= t <= 1 for Mistral AI
@@ -50,9 +53,12 @@ if __name__ == '__main__':
     prompt = f'Output a list of {args.n} specialist tasks taken from the Australian Skill Framework that are related to the following course:\n{description}'
     instructions = 'Answer only with a numbered list of skills, nothing else.'
 
-    if args.llm.startswith('gpt'):
+    if args.llm.startswith('deepseek'):
+        llm_oaclient = OpenAI(api_key=os.environ['DEEPSEEK_API_KEY'], base_url='https://api.deepseek.com')
+
+    if args.llm.startswith('gpt') or args.llm.startswith('deepseek'):
         # refer to https://platform.openai.com/docs/api-reference/chat
-        response = oaclient.chat.completions.create(
+        response = llm_oaclient.chat.completions.create(
             model=args.llm,
             temperature=args.temperature,
             messages=[
