@@ -1,3 +1,5 @@
 .env
 *.log
 openai-env
+__pycache__/
+venv
