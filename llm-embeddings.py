@@ -31,6 +31,7 @@ if __name__ == '__main__':
         'gpt-3.5-turbo',
         'gpt-4o',
         'gpt-4o-mini',
+        'gpt-4.5-preview',
         # Mistral AI
         'open-mistral-7b',
         'open-mixtral-8x7b',
