@@ -90,7 +90,7 @@ if __name__ == '__main__':
     labels['embedding'] = labels['label'].apply(lambda x: get_embedding(x, model=f'text-embedding-3-{args.embeddings}'))
 
     # load precomputed embeddings of the skills in the framework
-    embeddings = pd.read_pickle(f'skills-embeddings-3-{args.embeddings}.tar.gz')
+    embeddings = pd.read_pickle(os.path.join(os.path.dirname(os.path.realpath(__file__)), f'skills-embeddings-3-{args.embeddings}.tar.gz'))
 
     # dictionary to store results
     output = {
