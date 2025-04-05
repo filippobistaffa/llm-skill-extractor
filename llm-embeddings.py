@@ -83,7 +83,8 @@ if __name__ == '__main__':
 
     # keep only lines of the numbered list
     response = [line.split('. ', 1)[1].strip() for line in response.splitlines() if re.match(r'^\d+\. ', line)]
-    print(f'LLM ({args.llm}) response:\n- {"\n- ".join(response)}')
+    if args.json is None:
+        print(f'LLM ({args.llm}) response:\n- {"\n- ".join(response)}')
 
     # compute embeddings for the labels produced by the LLM
     labels = pd.DataFrame(response, columns=['label'])
@@ -101,8 +102,9 @@ if __name__ == '__main__':
     for i, label in labels.iterrows():
         embeddings['cos_sim'] = embeddings['embedding'].apply(lambda x: cosine_similarity(x, label['embedding']))
         topn = embeddings.nlargest(args.k, 'cos_sim')
-        print('{}{}'.format('\n' if i < args.n - 1 else '', label['label']))
-        print(topn)
+        if args.json is None:
+            print('{}{}'.format('\n' if i < args.n - 1 else '', label['label']))
+            print(topn)
         output['labels'][label['label']] = {
             #'embedding': label['embedding'].tolist(),
             'skills': [
