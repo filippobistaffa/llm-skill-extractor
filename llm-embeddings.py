@@ -101,10 +101,10 @@ if __name__ == '__main__':
     # for each skill produced the LLM, compute the k skills in the framework with the highest cosine similarity
     for i, label in labels.iterrows():
         embeddings['cos_sim'] = embeddings['embedding'].apply(lambda x: cosine_similarity(x, label['embedding']))
-        topn = embeddings.nlargest(args.k, 'cos_sim')
+        topk = embeddings.nlargest(args.k, 'cos_sim')
         if args.json is None:
             print('{}{}'.format('\n' if i < args.n - 1 else '', label['label']))
-            print(topn)
+            print(topk)
         output['labels'][label['label']] = {
             #'embedding': label['embedding'].tolist(),
             'skills': [
@@ -112,7 +112,7 @@ if __name__ == '__main__':
                     'skill': top_skill['skill'],
                     #'embedding': top_skill['embedding'].tolist(),
                     'similarity': top_skill['cos_sim']
-                } for _, top_skill in topn.iterrows()
+                } for _, top_skill in topk.iterrows()
             ]
         }
 
