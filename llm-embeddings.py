@@ -27,6 +27,8 @@ if __name__ == '__main__':
     parser = ap.ArgumentParser()
     parser.add_argument('--description', type=str, default=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'description.txt'))
     parser.add_argument('--llm', type=str, default='gpt-4o-mini', choices=[
+        # IIIA
+        'iiia',
         # OpenAI
         'gpt-3.5-turbo',
         'gpt-4o',
@@ -54,17 +56,20 @@ if __name__ == '__main__':
     prompt = f'Output a list of {args.n} specialist tasks taken from the Australian Skill Framework that are related to the following course:\n{description}'
     instructions = 'Answer only with a numbered list of skills, nothing else.'
 
+    if args.llm == 'iiia':
+        llm_oaclient = OpenAI(api_key=os.environ['IIIA_API_KEY'], base_url='https://llm.iiia.es')
+
     if args.llm.startswith('deepseek'):
         llm_oaclient = OpenAI(api_key=os.environ['DEEPSEEK_API_KEY'], base_url='https://api.deepseek.com')
 
-    if args.llm.startswith('gpt') or args.llm.startswith('deepseek'):
+    if args.llm.startswith('gpt') or args.llm.startswith('deepseek') or args.llm == 'iiia':
         # refer to https://platform.openai.com/docs/api-reference/chat
         response = llm_oaclient.chat.completions.create(
-            model=args.llm,
+            model='default/llm' if args.llm == 'iiia' else args.llm,
             temperature=args.temperature,
             messages=[
-                {'role': 'user', 'content': prompt},
                 {'role': 'system', 'content': instructions},
+                {'role': 'user', 'content': prompt},
             ]
         ).choices[0].message.content
     else:
