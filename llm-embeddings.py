@@ -43,6 +43,7 @@ if __name__ == '__main__':
         # DeepSeek
         'deepseek-chat',
     ])
+    parser.add_argument('--embeddings-prefix', type=str, default='skills')
     parser.add_argument('--embeddings', type=str, default='small', choices=['small', 'large'])
     parser.add_argument('--temperature', type=float, default=0) # should be 0 <= t <= 2 for OpenAI, 0 <= t <= 1 for Mistral AI
     parser.add_argument('-n', type=int, default=5)
@@ -96,7 +97,7 @@ if __name__ == '__main__':
     labels['embedding'] = labels['label'].apply(lambda x: get_embedding(x, model=f'text-embedding-3-{args.embeddings}'))
 
     # load precomputed embeddings of the skills in the framework
-    embeddings = pd.read_pickle(os.path.join(os.path.dirname(os.path.realpath(__file__)), f'skills-embeddings-3-{args.embeddings}.tar.gz'))
+    embeddings = pd.read_pickle(os.path.join(os.path.dirname(os.path.realpath(__file__)), f'{args.embeddings_prefix}-embeddings-3-{args.embeddings}.tar.gz'))
 
     # dictionary to store results
     output = {
